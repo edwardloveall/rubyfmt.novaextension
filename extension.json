@@ -1,0 +1,63 @@
+{
+  "identifier": "com.edwardloveall.rubyfmt",
+  "name": "rubyfmt",
+  "organization": "Edward Loveall",
+  "description": "Ruby Autoformatter",
+  "version": "1.0",
+  "categories": ["formatters"],
+  "repository": "https://github.com/edwardloveall/rubyfmt.novaextension",
+  "bugs": "https://github.com/edwardloveall/rubyfmt.novaextension/issues",
+  "main": "main.js",
+  "activationEvents": ["onLanguage:ruby"],
+  "entitlements": {
+    "process": true
+  },
+  "commands": {
+    "editor": [
+      {
+        "title": "Format Ruby (rubyfmt)",
+        "command": "rubyfmt.format",
+        "when": "editorHasFocus",
+        "filters": {
+          "syntaxes": ["ruby"]
+        }
+      }
+    ]
+  },
+  "config": [
+    {
+      "key": "com.edwardloveall.rubyfmt.rubyfmtPath",
+      "title": "rubyfmt Executable",
+      "type": "path",
+      "default": "",
+      "description": "Path to the rubyfmt executable. Can be overridden in project settings."
+    },
+    {
+      "key": "com.edwardloveall.rubyfmt.formatOnSave",
+      "title": "Format on Save",
+      "description": "Can be overridden in project settings.",
+      "type": "boolean",
+      "default": true
+    }
+  ],
+  "configWorkspace": [
+    {
+      "key": "com.edwardloveall.rubyfmt.rubyfmtPath",
+      "title": "rubyfmt Executable",
+      "type": "path",
+      "default": "",
+      "description": "Path to rubyfmt for this workspace"
+    },
+    {
+      "key": "com.edwardloveall.rubyfmt.formatOnSave",
+      "title": "Format on Save",
+      "type": "enum",
+      "values": [
+        ["global", "Global default"],
+        ["enabled", "Enable"],
+        ["disabled", "Disable"]
+      ],
+      "default": "global"
+    }
+  ]
+}
