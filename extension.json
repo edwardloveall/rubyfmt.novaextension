@@ -3,7 +3,7 @@
   "name": "rubyfmt",
   "organization": "Edward Loveall",
   "description": "Ruby Autoformatter",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "categories": ["formatters"],
   "repository": "https://github.com/edwardloveall/rubyfmt.novaextension",
   "bugs": "https://github.com/edwardloveall/rubyfmt.novaextension/issues",
