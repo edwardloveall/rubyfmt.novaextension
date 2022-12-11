@@ -15,7 +15,7 @@ const rubyfmt = (inputText) => {
     const rubyfmtPath = nova.path.expanduser(configPath);
 
     return new Process(rubyfmtPath, {
-      args: ["--"],
+      args: ["--header-opt-out", "--"],
       stdio: "pipe",
     });
   };
